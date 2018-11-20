@@ -18,11 +18,39 @@ class SplashScreenContent extends StatelessWidget {
   @override
 	Widget build(BuildContext context) {
 		return Scaffold(
-			appBar: AppBar(
-				title: Text("Assamese News Paper"),
-				backgroundColor: Colors.transparent,
+			// appBar: AppBar(
+			// 	// title: Text("Assamese News Paper"),
+			// 	backgroundColor: Colors.transparent,
+			// ),
+			backgroundColor: Colors.redAccent,
+			body: Stack(
+				children: <Widget>[
+					Column(
+						textBaseline: TextBaseline.alphabetic,
+						mainAxisAlignment: MainAxisAlignment.center,
+						children: <Widget>[
+							Center(
+								child:FlutterLogo(
+									size: 100,
+								)
+							),
+							// Container(
+							// 	height: 20,
+							// ),
+							// Center(
+							// 	child: CircularProgressIndicator(
+							// 		strokeWidth: 3,
+							// 	)
+							// ),
+							// Center(
+							// 	child: Text("Welcome")
+								
+							// )
+						],
+					)
+				],
 			),
-			body: Text("Welcome"),
+
 		);
 	}
 }
