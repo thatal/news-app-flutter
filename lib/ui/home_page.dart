@@ -16,7 +16,7 @@ class HomePage extends StatelessWidget {
 			),
 			home: Scaffold(
 				appBar: AppBar(
-					title: Text("Assamese News"),
+					title: Text("Assamese News")
 				),
 				body: PaperLinkPage(),
 			),
@@ -38,10 +38,16 @@ class _PaperLinkPageState extends State<PaperLinkPage> {
 	}
   @override
 	Widget build(BuildContext context) {
+	// var size = MediaQuery.of(context).size;
+	// final double itemHeight = (size.height - kToolbarHeight-24)/2;
+	// final double itemWidth = size.width/2;
 		return OrientationBuilder(
 			builder: (context, orientation){				
 				return GridView.count(
 					crossAxisCount: orientation==Orientation.portrait ? 2 : 3,
+					shrinkWrap: true,
+					// childAspectRatio: (itemWidth/itemHeight),
+					padding: EdgeInsets.all(1),
 					children: List.generate(newsLinks.length, (index){
 						return _getNewsGrid(newsLinks[index]);
 					}),
@@ -65,16 +71,30 @@ class _PaperLinkPageState extends State<PaperLinkPage> {
 						mainAxisSize: MainAxisSize.min,
 						verticalDirection: VerticalDirection.down,
 						children: <Widget>[
-							Image(image: AssetImage("${item.logo}")),
 							Container(
-								
+								padding: EdgeInsets.only(top: 20),
+							),
+							Image(image: AssetImage("${item.logo}"),
+								height: 90,
+								// width: 100,
+								fit: BoxFit.fill,
+							),
+							Container(
+								// color: Colors.grey,
+								// height: 1,
 							),
 							new Padding(
 								padding: EdgeInsets.only(top: 20),
 								child: new Column(
 									crossAxisAlignment: CrossAxisAlignment.start,
 									children: <Widget>[
-									new Text("${item.name}"),
+										FittedBox(
+											child: Text("${item.name}",
+												style: TextStyle(
+													fontWeight: FontWeight.bold
+												),
+											),
+										)
 									// new Text(country.nativeName),
 									// new Text(country.capital),
 									],
@@ -101,32 +121,62 @@ class _PaperLinkPageState extends State<PaperLinkPage> {
 			NewsLinks(
 				name: "Dainik Janambhumi",
 				url: "http://dainikjanambhumi.co.in",
-				logo: "assets\\news_logo\\dainik_janambhumi_logo.jpg"
+				logo: "assets\\news_logo\\log_dainik_janambhumi.jpg"
 			),			
 			NewsLinks(
 				name: "Pratidin",
 				url: "https://epaper.asomiyapratidin.in/",
-				logo: "assets\\news_logo\\pratidin_logo_2.png"
+				logo: "assets\\news_logo\\logo_pratidin.jpg"
 			),
 			NewsLinks(
 				name: "Niyomia Barta",
 				url: "http://www.niyomiyabarta.org/",
-				logo: "assets\\news_logo\\n_barta.jpg"
+				logo: "assets\\news_logo\\logo_n_barta.jpg"
 			),
 			NewsLinks(
 				name: "Assamiya Khabor",
 				url: "http://www.assamiyakhabor.com/",
-				logo: "assets\\news_logo\\amar_axom.jpg"
+				logo: "assets\\news_logo\\logo_amar_axom.jpg"
 			),
 			NewsLinks(
 				name: "Amar Asom",
 				url: "http://amarasom.glpublications.in/",
-				logo: "assets\\news_logo\\amar_axom.jpg"
+				logo: "assets\\news_logo\\logo_amar_axom.jpg"
 			),
 			NewsLinks(
 				name: "Gana Adhikar",
 				url: "http://ganaadhikar.com/ganaadhikar/epaper/"+formatted+"/page1.html",
-				logo: "assets\\news_logo\\gana_adhikarpng"
+				logo: "assets\\news_logo\\logo_gana_adhikar.jpg"
+			),
+			NewsLinks(
+				name: "Hadin",
+				url: "http://www.sadin.co.in/",
+				logo: "assets\\news_logo\\logo_hadin.jpg"
+			),
+			NewsLinks(
+				name: "The Assam Tribune",
+				url: "http://www.assamtribune.com/epaper/index.html",
+				logo: "assets\\news_logo\\logo_tribune.jpg"
+			),
+			NewsLinks(
+				name: "The Sentinal",
+				url: "https://www.sentinelassam.com/",
+				logo: "assets\\news_logo\\logo_sentinal.jpg"
+			),
+			NewsLinks(
+				name: "Purbanchal Prahari",
+				url: "http://pp.glpublications.in/",
+				logo: "assets\\news_logo\\logo_purbanchal.jpg"
+			),
+			NewsLinks(
+				name: "Dainik Purbodai",
+				url: "http://dainikpurvoday.com/",
+				logo: "assets\\news_logo\\logo_dainik_purpadai.jpg"
+			),
+			NewsLinks(
+				name: "Samayik Prasanga",
+				url: "http://www.samayikprasanga.in/epaper.php",
+				logo: "assets\\news_logo\\logo_prasanga.jpg"
 			),
 		];
 	}

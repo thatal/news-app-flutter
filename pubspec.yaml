@@ -20,10 +20,11 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
   flutter_webview_plugin: ^0.3.0+2
-  path_provider: ^0.4.1
-  url_launcher:
+  # path_provider: ^0.4.1
+  # url_launcher:
   share:
   intl:
+  firebase_admob: ^0.5.2
   
 
 dev_dependencies:
@@ -44,18 +45,29 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-  - assets\news_logo\dainik_janambhumi_logo.jpg
-  - assets\news_logo\pratidin_logo_2.png
-  - assets\news_logo\amar_axom.png
-  - assets\news_logo\assam_triune_app.gif
-  - assets\news_logo\dainik_purpodai.jpg
-  - assets\news_logo\gana_adhikar.png
-  - assets\news_logo\n_barta.jpg
-  - assets\news_logo\pratidin_logo_2.png
-  - assets\news_logo\sadin.png
-  - assets\news_logo\samayikprasanga.png
-  - assets\news_logo\sentinal_logo.png
-  - assets\news_logo\amar_axom.png
+  # - assets\news_logo\dainik_janambhumi_logo.jpg
+  # - assets\news_logo\pratidin_logo_2.png
+  # - assets\news_logo\amar_axom.png
+  # - assets\news_logo\assam_triune_app.gif
+  # - assets\news_logo\dainik_purpodai.jpg
+  # - assets\news_logo\gana_adhikar.png
+  # - assets\news_logo\n_barta.jpg
+  # - assets\news_logo\pratidin_logo_2.png
+  # - assets\news_logo\sadin.png
+  # - assets\news_logo\samayikprasanga.png
+  # - assets\news_logo\sentinal_logo.png
+  # - assets\news_logo\amar_axom.png
+  - assets\news_logo\log_dainik_janambhumi.jpg
+  - assets\news_logo\logo_pratidin.jpg
+  - assets\news_logo\logo_n_barta.jpg
+  - assets\news_logo\logo_amar_axom.jpg
+  - assets\news_logo\logo_gana_adhikar.jpg
+  - assets\news_logo\logo_hadin.jpg
+  - assets\news_logo\logo_tribune.jpg
+  - assets\news_logo\logo_purbanchal.jpg
+  - assets\news_logo\logo_sentinal.jpg
+  - assets\news_logo\logo_dainik_purpadai.jpg
+  - assets\news_logo\logo_prasanga.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
